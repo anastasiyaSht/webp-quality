@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Webp Quality</title>
+	<link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+	<div class="container">
+
+		<picture>
+			<img src="img/1.webp" alt="Alt Text!" id="webp-image">
+			<source srcset="img/1.webp" type="image/webp">
+			<source srcset="img/1.jpg" type="image/jpeg">
+		</picture>
+
+		<div class="webp-quality-container">
+			<div>
+				<input type="range" id="webp-quality-range" min="0" max="100" value="75"
+				       list="tickmarks"/>
+
+				<datalist id="tickmarks">
+					<option value="0" label="0%">
+					<option value="10">
+					<option value="20">
+					<option value="30">
+					<option value="40">
+					<option value="50" label="50%">
+					<option value="60">
+					<option value="70">
+					<option value="80">
+					<option value="90">
+					<option value="100" label="100%">
+				</datalist>
+			</div>
+
+			<div class="quality-number-container">
+				<input type="number" id="webp-quality-number" min="0" max="100"
+				       value="75"/>
+			</div>
+
+		</div>
+	</div>
+
+	<script src="js/webp.js" type="module"></script>
+
+</body>
+</html>
